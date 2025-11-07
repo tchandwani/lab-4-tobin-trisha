@@ -36,7 +36,7 @@ def insert(bst: BinarySearchTree, value: Any) -> BinarySearchTree:
             return Node(
                 tree.val,
                 tree.left,
-                insert_helper(tree.left, value, comes_before) )
+                insert_helper(tree.right, value, comes_before) )
         return tree
      
     new_bin_tree = insert_helper(bst.bin_tree, value, bst.comes_before)
